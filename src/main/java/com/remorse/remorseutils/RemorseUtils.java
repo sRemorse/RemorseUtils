@@ -2,6 +2,7 @@ package com.remorse.remorseutils;
 
 import com.remorse.remorseutils.Commands.GodCommand;
 import com.remorse.remorseutils.Listeners.GodModeHandler;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
@@ -25,8 +26,8 @@ public final class RemorseUtils extends JavaPlugin {
         log.info("Plugin disabled!");
     }
 
-    public void registerEvents(){
-        getServer().getPluginManager().registerEvents(GodModeHandler, this);
+    private void registerEvents(){
+        getServer().getPluginManager().registerEvents(new GodModeHandler(), this);
     }
 
     private void registerCommands(){
