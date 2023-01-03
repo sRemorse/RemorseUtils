@@ -1,0 +1,8 @@
+name: RemorseUtils
+version: '${project.version}'
+main: com.remorse.remorseutils.RemorseUtils
+api-version: 1.19
+prefix: RemorseUtils
+authors: [ Remorse ]
+description: A collection of useful utility commands
+website: https://github.com/sRemorse
