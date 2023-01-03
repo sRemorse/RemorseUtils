@@ -31,4 +31,4 @@ public class GodModeHandler implements Listener {
         }
     }
 
-} // Finished
+}
