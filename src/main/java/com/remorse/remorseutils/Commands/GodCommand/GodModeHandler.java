@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GodModeHandler {
 
     private static ArrayList<String> godPlayers;
-    // Initialiser
+    // Initializer
     public GodModeHandler(){
         godPlayers = new ArrayList<String>();
     }
