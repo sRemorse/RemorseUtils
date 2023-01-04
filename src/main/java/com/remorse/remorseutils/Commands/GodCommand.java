@@ -14,12 +14,10 @@ public class GodCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        if (sender instanceof Player player){
-            if (player.hasPermission("remorseutils.god")){
-                if (args.length == 0){
-                    toggleGod(player);
-                }
-            }
+        if(sender instanceof Player player) {
+            if (!player.hasPermission("remorseutils.god")) return false;
+            if (args.length != 0) return false;
+            toggleGod(player);
         }
         return true;
     }
