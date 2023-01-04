@@ -9,6 +9,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 
 public class GodModeHandler implements Listener {
+
     private GodCommand godCommand;
 
     @EventHandler
@@ -16,7 +17,8 @@ public class GodModeHandler implements Listener {
         Entity entity = event.getEntity();
 
         if(entity instanceof Player player){
-            if(godCommand.godPlayers.contains(player))
+            String name = player.getName();
+            if(godCommand.godPlayers.contains(name))
                 event.setCancelled(true);
         }
     }
@@ -26,7 +28,8 @@ public class GodModeHandler implements Listener {
         Entity entity = event.getEntity();
 
         if (entity instanceof Player player) {
-            if (godCommand.godPlayers.contains(player))
+            String name = player.getName();
+            if (godCommand.godPlayers.contains(name))
                 event.setCancelled(true);
         }
     }
