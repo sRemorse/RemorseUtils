@@ -22,7 +22,9 @@ Please open an issue with the bug or feature request template.
 <details>
   <summary>Permissions</summary>
   
+  ```
   - remorseutils.god (Access to the god command)
+  ```
 </details>
 
 ## Feedback
