@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 
 public class GodModeListener implements Listener {
@@ -29,6 +30,18 @@ public class GodModeListener implements Listener {
             String name = player.getName();
             if (GodModeHandler.getGodPlayers().contains(name))
                 event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onTargeted(EntityTargetLivingEntityEvent event){
+        Entity target = event.getTarget();
+
+        if(target instanceof Player player){
+            String name = player.getName();
+            if (GodModeHandler.getGodPlayers().contains(name)){
+                event.setCancelled(true);
+            }
         }
     }
 
