@@ -11,6 +11,15 @@ Download the latest release and place it in your plugins folder.
 
 Please open an issue with the bug or feature request template.
 
+## Commands and Permissions
+<details>
+  <summary>Commands</summary>
+    - God (Make yourself immune to damage)
+</details>
+<details>
+  <summary>Permissions</summary>
+    - remorseutils.god (Access to the god command)
+</details>
 
 ## Feedback
 
