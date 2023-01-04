@@ -51,6 +51,7 @@ public class GodCommand implements CommandExecutor {
             player.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode enabled"));
         } else {
             GodModeHandler.removePlayer(name);
+            player.setFireTicks(0);
             player.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled"));
         }
     }
@@ -67,6 +68,7 @@ public class GodCommand implements CommandExecutor {
             target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode has been enabled for you"));
         } else {
             GodModeHandler.removePlayer(targetPlayer);
+            target.setFireTicks(0);
             if(!sender.getName().equals(targetPlayer))
                 sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled for %target%".replace("%target%", target.getName()) ));
             target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode has been disabled for you"));
