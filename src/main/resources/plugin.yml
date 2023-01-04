@@ -10,6 +10,10 @@ website: https://github.com/sRemorse
 commands:
   god:
     aliases: god
-    description: Enter God mode
-    usage: ""
+    description: "Enter God mode"
+    usage: "/<command> [player]"
     permission: remorseutils.god
+
+permissions:
+  remorseutils.god.others:
+    description: "Apply God mode to other players"
