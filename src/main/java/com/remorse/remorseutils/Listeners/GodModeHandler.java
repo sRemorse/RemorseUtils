@@ -18,7 +18,7 @@ public class GodModeHandler implements Listener {
 
         if(entity instanceof Player player){
             String name = player.getName();
-            if(godCommand.godPlayers.contains(name))
+            if(godCommand.getGodPlayers().contains(name))
                 event.setCancelled(true);
         }
     }
@@ -29,7 +29,7 @@ public class GodModeHandler implements Listener {
 
         if (entity instanceof Player player) {
             String name = player.getName();
-            if (godCommand.godPlayers.contains(name))
+            if (godCommand.getGodPlayers().contains(name))
                 event.setCancelled(true);
         }
     }

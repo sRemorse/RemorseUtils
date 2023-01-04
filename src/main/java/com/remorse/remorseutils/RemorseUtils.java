@@ -2,12 +2,12 @@ package com.remorse.remorseutils;
 
 import com.remorse.remorseutils.Commands.GodCommand;
 import com.remorse.remorseutils.Listeners.GodModeHandler;
-import org.bukkit.plugin.Plugin;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
-public final class RemorseUtils extends JavaPlugin {
+public class RemorseUtils extends JavaPlugin implements Listener {
 
     public Logger log = getLogger();
 

@@ -33,7 +33,8 @@ public class GodCommand implements CommandExecutor {
         }
     }
 
-
-
+    public ArrayList<String> getGodPlayers(){
+        return godPlayers;
+    }
 
 }
