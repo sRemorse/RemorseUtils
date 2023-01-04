@@ -47,6 +47,7 @@ public class GodCommand implements CommandExecutor {
         if(!GodModeHandler.getGodPlayers().contains(name)){
             GodModeHandler.addPlayer(name);
             player.setHealth(20.0); // Heal player to max health when adding them to the GodPlayers list
+
             player.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode enabled"));
         } else {
             GodModeHandler.removePlayer(name);
@@ -60,11 +61,13 @@ public class GodCommand implements CommandExecutor {
             GodModeHandler.addPlayer(targetPlayer);
             target.setHealth(20.0); // Heal target to max health when adding them to the GodPlayers list
 
-            sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode enabled for %target%".replace("%target%", target.getName()) ));
+            if(!sender.getName().equals(targetPlayer))
+                sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode enabled for %target%".replace("%target%", target.getName()) ));
             target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode has been enabled for you"));
         } else {
             GodModeHandler.removePlayer(targetPlayer);
-            sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled for %target%".replace("%target%", target.getName()) ));
+            if(!sender.getName().equals(targetPlayer))
+                sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled for %target%".replace("%target%", target.getName()) ));
             target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode has been disabled for you"));
         }
     }
