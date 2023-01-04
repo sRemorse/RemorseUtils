@@ -36,7 +36,7 @@ public class GodCommand implements CommandExecutor {
                         sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] User is not online"));
                         return true;
                     }
-                    toggleGod(target);
+                    toggleGodTarget(sender,target);
                     return true;
                 }
         return true;
@@ -51,6 +51,21 @@ public class GodCommand implements CommandExecutor {
         } else {
             GodModeHandler.removePlayer(name);
             player.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled"));
+        }
+    }
+
+    private void toggleGodTarget(CommandSender sender, Player target){
+        String targetPlayer = target.getName();
+        if(!GodModeHandler.getGodPlayers().contains(targetPlayer)){
+            GodModeHandler.addPlayer(targetPlayer);
+            target.setHealth(20.0); // Heal target to max health when adding them to the GodPlayers list
+
+            sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode enabled for %target%".replace("%target%", target.getName()) ));
+            target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &aGodmode has been enabled for you"));
+        } else {
+            GodModeHandler.removePlayer(targetPlayer);
+            sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode disabled for %target%".replace("%target%", target.getName()) ));
+            target.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &cGodmode has been disabled for you"));
         }
     }
 
