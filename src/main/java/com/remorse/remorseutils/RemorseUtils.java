@@ -3,6 +3,7 @@ package com.remorse.remorseutils;
 import com.remorse.remorseutils.Commands.GodCommand.GodCommand;
 import com.remorse.remorseutils.Commands.GodCommand.GodModeHandler;
 import com.remorse.remorseutils.Listeners.GodModeListener;
+import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Logger;
@@ -10,6 +11,12 @@ import java.util.logging.Logger;
 public class RemorseUtils extends JavaPlugin implements Listener {
 
     public Logger log = getLogger();
+
+    // Color message utility
+    public static String translate(String message) {
+        return ChatColor.translateAlternateColorCodes('&', message);
+    }
+
 
     @Override
     public void onEnable() {
