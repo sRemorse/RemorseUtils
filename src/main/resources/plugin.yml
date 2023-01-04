@@ -10,5 +10,5 @@ website: https://github.com/sRemorse
 commands:
   god:
     description: Enter God mode
-    usage: /<command>
+    usage: ""
     permission: remorseutils.god
