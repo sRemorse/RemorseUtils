@@ -15,7 +15,9 @@ Please open an issue with the bug or feature request template.
 <details>
   <summary>Commands</summary>
   
+  ```
   - God (Make yourself immune to damage)
+  ```
 </details>
 <details>
   <summary>Permissions</summary>
