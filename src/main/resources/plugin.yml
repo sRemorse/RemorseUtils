@@ -9,6 +9,7 @@ website: https://github.com/sRemorse
 
 commands:
   god:
+    aliases: god
     description: Enter God mode
     usage: ""
     permission: remorseutils.god
