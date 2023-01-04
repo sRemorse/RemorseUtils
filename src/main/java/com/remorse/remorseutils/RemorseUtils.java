@@ -1,10 +1,10 @@
 package com.remorse.remorseutils;
 
-import com.remorse.remorseutils.Commands.GodCommand;
-import com.remorse.remorseutils.Listeners.GodModeHandler;
+import com.remorse.remorseutils.Commands.GodCommand.GodCommand;
+import com.remorse.remorseutils.Commands.GodCommand.GodModeHandler;
+import com.remorse.remorseutils.Listeners.GodModeListener;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import java.util.logging.Logger;
 
 public class RemorseUtils extends JavaPlugin implements Listener {
@@ -14,9 +14,11 @@ public class RemorseUtils extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        new GodModeHandler();
 
         registerCommands();
         registerEvents();
+
         log.info("Plugin enabled!");
     }
 
@@ -27,7 +29,7 @@ public class RemorseUtils extends JavaPlugin implements Listener {
     }
 
     private void registerEvents(){
-        getServer().getPluginManager().registerEvents(new GodModeHandler(), this);
+        getServer().getPluginManager().registerEvents(new GodModeListener(), this);
     }
 
     private void registerCommands(){
