@@ -16,7 +16,7 @@ Please open an issue with the bug or feature request template.
   <summary>Commands</summary>
   
   ```
-  - God (Make yourself immune to damage)
+  - /god [player] (Take no damage and don't be targeted by mobs)
   ```
 </details>
 <details>
@@ -24,6 +24,7 @@ Please open an issue with the bug or feature request template.
   
   ```
   - remorseutils.god (Access to the god command)
+      remorse.utils.god.others (Target others with god command)
   ```
 </details>
 
