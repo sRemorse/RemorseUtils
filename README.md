@@ -24,7 +24,7 @@ Please open an issue with the bug or feature request template.
   
   ```
   - remorseutils.god (Access to the god command)
-      remorse.utils.god.others (Target others with god command)
+      remorseutils.god.others (Target others with god command)
   ```
 </details>
 
