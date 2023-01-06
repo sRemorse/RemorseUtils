@@ -17,6 +17,7 @@ Please open an issue with the bug or feature request template.
   
   ```
   - /god [player] (Take no damage and don't be targeted by mobs)
+  - /kick [player] [reason] (Kick player from server with optional reason)
   ```
 </details>
 <details>
@@ -25,6 +26,7 @@ Please open an issue with the bug or feature request template.
   ```
   - remorseutils.god (Access to the god command)
       remorseutils.god.others (Target others with god command)
+  - remorseutils.kick (Access to the kick command)
   ```
 </details>
 
