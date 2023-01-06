@@ -1,6 +1,6 @@
 package com.remorse.remorseutils.Listeners;
 
-import com.remorse.remorseutils.Commands.GodCommand.GodModeHandler;
+import com.remorse.remorseutils.Commands.God.GodModeHandler;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

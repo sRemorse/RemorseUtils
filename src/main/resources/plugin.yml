@@ -13,7 +13,16 @@ commands:
     description: "Enter God mode"
     usage: "/<command> [player]"
     permission: remorseutils.god
+  kick:
+    aliases: kick
+    description: "Kick a player from the server"
+    usage: "/<command> [player] [reason]"
+    permission: remorseutils.kick
 
 permissions:
+  remorseutils.god:
+    description: "Apply God mode to yourself"
   remorseutils.god.others:
     description: "Apply God mode to other players"
+  remorseutils.kick:
+    description: "Kick a player from server"

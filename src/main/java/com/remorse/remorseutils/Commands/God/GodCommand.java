@@ -1,4 +1,4 @@
-package com.remorse.remorseutils.Commands.GodCommand;
+package com.remorse.remorseutils.Commands.God;
 
 import com.remorse.remorseutils.RemorseUtils;
 import org.bukkit.Bukkit;

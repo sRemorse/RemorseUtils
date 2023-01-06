@@ -1,4 +1,4 @@
-package com.remorse.remorseutils.Commands.GodCommand;
+package com.remorse.remorseutils.Commands.God;
 
 import java.util.ArrayList;
 
