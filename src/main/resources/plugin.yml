@@ -12,17 +12,14 @@ commands:
     aliases: god
     description: "Enter God mode"
     usage: "/<command> [player]"
-    permission: remorseutils.god
   kick:
     aliases: kick
     description: "Kick a player from the server"
     usage: "/<command> [player] [reason]"
-    permission: remorseutils.kick
   rain:
     aliases: rain
     description: "Toggle rain"
     usage: "/<command>"
-    permission: remorseutils.rain
 
 permissions:
   remorseutils.god:
