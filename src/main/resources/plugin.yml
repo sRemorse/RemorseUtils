@@ -18,6 +18,11 @@ commands:
     description: "Kick a player from the server"
     usage: "/<command> [player] [reason]"
     permission: remorseutils.kick
+  rain:
+    aliases: rain
+    description: "Toggle rain"
+    usage: "/<command>"
+    permission: remorseutils.rain
 
 permissions:
   remorseutils.god:
@@ -26,3 +31,5 @@ permissions:
     description: "Apply God mode to other players"
   remorseutils.kick:
     description: "Kick a player from server"
+  remorseutils.rain:
+    description: "Toggle rain"
