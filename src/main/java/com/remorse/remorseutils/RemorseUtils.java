@@ -3,6 +3,7 @@ package com.remorse.remorseutils;
 import com.remorse.remorseutils.Commands.God.GodCommand;
 import com.remorse.remorseutils.Commands.God.GodModeHandler;
 import com.remorse.remorseutils.Commands.Kick.KickCommand;
+import com.remorse.remorseutils.Commands.Rain.RainCommand;
 import com.remorse.remorseutils.Listeners.GodModeListener;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;
@@ -26,7 +27,6 @@ public class RemorseUtils extends JavaPlugin implements Listener {
 
         registerCommands();
         registerEvents();
-
         log.info("Plugin enabled!");
     }
 
@@ -43,6 +43,7 @@ public class RemorseUtils extends JavaPlugin implements Listener {
     private void registerCommands(){
         getCommand("god").setExecutor(new GodCommand());
         getCommand("kick").setExecutor(new KickCommand());
+        getCommand("rain").setExecutor(new RainCommand());
     }
 
 
