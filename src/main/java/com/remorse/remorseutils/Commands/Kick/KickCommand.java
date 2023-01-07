@@ -19,8 +19,8 @@ public class KickCommand implements CommandExecutor {
 
         if (!sender.hasPermission("remorseutils.kick")){
             sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] You don't have permission to do this!"));
-        return true;
-    }
+            return true;
+        }
 
         if (!(args.length > 0)){
             sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] Usage: /kick [player] [reason]"));
@@ -40,7 +40,7 @@ public class KickCommand implements CommandExecutor {
 
         }
 
-    return true;
+        return true;
     }
 
 
