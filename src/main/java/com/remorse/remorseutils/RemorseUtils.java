@@ -16,7 +16,7 @@ public class RemorseUtils extends JavaPlugin implements Listener {
 
     // Color message utility
     public static String translate(String message) {
-        return ChatColor.translateAlternateColorCodes('&', message);
+        return ChatColor.translateAlternateColorCodes('&',message);
     }
 
 

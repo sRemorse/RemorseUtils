@@ -1,7 +1,6 @@
 package com.remorse.remorseutils.Commands.Rain;
 
 import com.remorse.remorseutils.RemorseUtils;
-import org.bukkit.WeatherType;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
