@@ -1,0 +1,7 @@
+prefix: "&c&lUtils &7&l» "
+
+error:
+  permission: "&cYou don't have permission for this!"
+  permission-target: "&cYou don't have permission to do this to that player!"
+  console: "&cConsole cannot do this!"
+  player-online: "&cPlayer is not online!"
