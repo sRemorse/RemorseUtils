@@ -25,20 +25,20 @@ public class GodCommand implements CommandExecutor {
             }
         }
 
-            // God on target
-            if (!sender.hasPermission("remorseutils.god.others")) {
-                sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] You don't have permission to do this to that player!"));
+        // God on target
+        if (!sender.hasPermission("remorseutils.god.others")) {
+            sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] You don't have permission to do this to that player!"));
+            return true;
+        }
+        if (args.length > 0) {
+            Player target = Bukkit.getPlayer(args[0]);
+            if(target == null){
+                sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] User is not online"));
                 return true;
             }
-                if (args.length > 0) {
-                    Player target = Bukkit.getPlayer(args[0]);
-                    if(target == null){
-                        sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] User is not online"));
-                        return true;
-                    }
-                    toggleGodTarget(sender,target);
-                    return true;
-                }
+            toggleGodTarget(sender,target);
+            return true;
+        }
         return true;
     }
 
