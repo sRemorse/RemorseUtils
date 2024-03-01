@@ -12,6 +12,10 @@ commands:
     aliases: god
     description: "Enter God mode"
     usage: "/<command> [player]"
+  gods:
+    aliases: godlist
+    description: List players with godmode
+    usage: "/<command>"
   kick:
     aliases: kick
     description: "Kick a player from the server"

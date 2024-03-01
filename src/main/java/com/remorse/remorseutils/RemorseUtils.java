@@ -1,6 +1,7 @@
 package com.remorse.remorseutils;
 
 import com.remorse.remorseutils.Commands.God.GodCommand;
+import com.remorse.remorseutils.Commands.God.GodListCommand;
 import com.remorse.remorseutils.Commands.God.GodModeHandler;
 import com.remorse.remorseutils.Commands.Kick.KickCommand;
 import com.remorse.remorseutils.Commands.Rain.RainCommand;
@@ -42,6 +43,7 @@ public class RemorseUtils extends JavaPlugin implements Listener {
 
     private void registerCommands(){
         getCommand("god").setExecutor(new GodCommand());
+        getCommand("gods").setExecutor(new GodListCommand());
         getCommand("kick").setExecutor(new KickCommand());
         getCommand("rain").setExecutor(new RainCommand());
     }
