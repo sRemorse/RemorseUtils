@@ -13,7 +13,6 @@ commands:
     description: "Enter God mode"
     usage: "/<command> [player]"
   gods:
-    aliases: godlist
     description: List players with godmode
     usage: "/<command>"
   kick:

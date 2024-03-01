@@ -7,11 +7,38 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+
 
 public class GodCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+
+        // List players that currently have godmode
+        if (cmd.getName().equalsIgnoreCase("gods")){
+            if (sender instanceof Player player) {
+                if (!player.hasPermission("remorseutils.god.list")) {
+                    sender.sendMessage(RemorseUtils.translate("&c[RemorseUtils] You don't have permission to do this!"));
+                    return true;
+                }
+
+                if (args.length == 0) {
+                    ArrayList<String> names = GodModeHandler.getGodPlayers();
+
+                    if (names.isEmpty()){
+                        sender.sendMessage(RemorseUtils.translate("&7[RemorseUtils] No players with godmode"));
+                        return true;
+                    }
+
+                    sender.sendMessage(RemorseUtils.translate("&6[RemorseUtils] &7Players with godmode"));
+                    for (String name : names) {
+                        sender.sendMessage(RemorseUtils.translate("&a[•] &7" + name));
+                        return true;
+                    }
+                }
+            }
+        }
 
         // God on yourself
         if(sender instanceof Player player) {
